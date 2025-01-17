@@ -6,7 +6,7 @@ import { retry } from "rxjs";
     standalone:true
 })
 
-
+//Pipe method to convert Celcius faharanhite
 export class TemperatuePipe implements PipeTransform{
 transform(value:string|number|null, 
     inputType: 'cel' |'fah' ,
@@ -30,7 +30,6 @@ transform(value:string|number|null,
     }else{
         outputTemp = val;
     }
-
     let symbol : '°C' | '°F';
 
     if(!outputType){
